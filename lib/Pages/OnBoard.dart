@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 
 class OneBoard extends StatelessWidget {
@@ -58,6 +59,7 @@ class OneBoard extends StatelessWidget {
             shape: const CircleBorder(),
             padding: const EdgeInsets.all(20),
             backgroundColor: Color(0xFF92A3FD),
+            side: BorderSide(width: 3.0, color: Colors.white),
           ),
           child: const Icon(
             Icons.keyboard_arrow_right_rounded,
