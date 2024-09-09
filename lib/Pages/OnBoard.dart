@@ -75,7 +75,14 @@ class OneBoard extends StatelessWidget {
           bottom: 30, // Adjust the distance from the bottom
           right: 30, // Adjust the distance from the left
           child: ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => OneBoard(),
+                ),
+              );
+            },
             style: ElevatedButton.styleFrom(
               shape: const CircleBorder(),
               padding: const EdgeInsets.all(20),
