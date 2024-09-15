@@ -1,9 +1,8 @@
 // ignore: file_names
-import 'package:fitnest/Pages/onBoard3rd.dart';
 import 'package:flutter/material.dart';
 
-class OneBoard2 extends StatelessWidget {
-  const OneBoard2({super.key});
+class onBoard3rd extends StatelessWidget {
+  const onBoard3rd({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,15 +25,11 @@ class OneBoard2 extends StatelessWidget {
               width: double.infinity,
               child: Stack(
                 children: [
-                  CustomPaint(
-                    painter: CustomShapePainter(),
-                    size: Size.infinite, // Fills the available space
-                  ),
                   Center(
                     child: Image.asset(
-                      'lib/assets/runner.png',
-                      height: 350,
-                      width: 200,
+                      'lib/assets/Frame.png',
+                      height: 800,
+                      width: 900,
                     ),
                   ),
                 ],
@@ -102,35 +97,6 @@ class OneBoard2 extends StatelessWidget {
   }
 }
 
-class CustomShapePainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..shader = const LinearGradient(
-        colors: [Color(0xFF9DCEFF), Color(0xFF92A3FD)],
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-      ).createShader(Rect.fromLTRB(0, 0, size.width, size.height));
-
-    final path = Path()
-      ..moveTo(0, 0)
-      ..lineTo(0, size.height * 0.7)
-      ..quadraticBezierTo(size.width * 0.4, size.height * 0.3, size.width * 0.4,
-          size.height * 0.4)
-      ..quadraticBezierTo(
-          size.width * 0.85, size.height * 0.6, size.width, size.height)
-      ..lineTo(size.width, 0)
-      ..close();
-
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return false;
-  }
-}
-
 void main() {
-  runApp(const OneBoard2());
+  runApp(const onBoard3rd());
 }
