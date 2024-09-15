@@ -1,9 +1,8 @@
 // ignore: file_names
-import 'package:fitnest/Pages/OnBoard2.dart';
 import 'package:flutter/material.dart';
 
-class OneBoard extends StatelessWidget {
-  const OneBoard({super.key});
+class OneBoard2 extends StatelessWidget {
+  const OneBoard2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class OneBoard extends StatelessWidget {
                   ),
                   Center(
                     child: Image.asset(
-                      'lib/assets/Female.png',
+                      'lib/assets/runner.png',
                       height: 350,
                       width: 200,
                     ),
@@ -46,7 +45,7 @@ class OneBoard extends StatelessWidget {
               children: const [
                 Text(
                   textAlign: TextAlign.start,
-                  "Track Your Goal",
+                  "Get Burn",
                   style: TextStyle(
                     color: Color(0xff1d1517),
                     fontSize: 24,
@@ -56,7 +55,7 @@ class OneBoard extends StatelessWidget {
                 ),
                 SizedBox(height: 10),
                 Text(
-                  "   Don't worry if you have trouble determining your goals,   We can help you determine your goals and track your goals",
+                  " Let’s keep burning, to achive yours goals, it hurts only temporarily, if you give up now you will be in pain forever",
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     color: Color(0xff7b6f72),
@@ -115,10 +114,10 @@ class CustomShapePainter extends CustomPainter {
     final path = Path()
       ..moveTo(0, 0)
       ..lineTo(0, size.height * 0.7)
-      ..quadraticBezierTo(size.width * 0.3, size.height * 0.9, size.width * 0.4,
-          size.height * 0.85)
+      ..quadraticBezierTo(size.width * 0.4, size.height * 0.3, size.width * 0.4,
+          size.height * 0.4)
       ..quadraticBezierTo(
-          size.width * 0.85, size.height * 0.8, size.width, size.height)
+          size.width * 0.85, size.height * 0.6, size.width, size.height)
       ..lineTo(size.width, 0)
       ..close();
 
@@ -132,5 +131,5 @@ class CustomShapePainter extends CustomPainter {
 }
 
 void main() {
-  runApp(const OneBoard());
+  runApp(const OneBoard2());
 }
