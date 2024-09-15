@@ -22,48 +22,54 @@ class OneBoard2 extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: MediaQuery.of(context).size.height *
+                  0.57, // 57% of the screen height
               width: double.infinity,
               child: Stack(
                 children: [
-                  CustomPaint(
-                    painter: CustomShapePainter(),
-                    size: Size.infinite, // Fills the available space
-                  ),
                   Center(
                     child: Image.asset(
-                      'lib/assets/runner.png',
-                      height: 350,
-                      width: 200,
+                      'lib/assets/FrameRunner.png',
+                      height: MediaQuery.of(context).size.height *
+                          0.57, // Set the image height
+                      width: double
+                          .infinity, // Stretch the image to the full width
+                      fit: BoxFit
+                          .cover, // Ensure the image covers the available space
                     ),
                   ),
                 ],
               ),
             ),
             const Spacer(),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: const [
-                Text(
-                  textAlign: TextAlign.start,
-                  "Get Burn",
-                  style: TextStyle(
-                    color: Color(0xff1d1517),
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    height: 1.5,
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: 20.0), // Add horizontal padding for better layout
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const [
+                  Text(
+                    "Get Burn",
+                    textAlign: TextAlign.center, // Center the heading text
+                    style: TextStyle(
+                      color: Color(0xff1d1517),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700,
+                      height: 1.5,
+                    ),
                   ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  " Let’s keep burning, to achive yours goals, it hurts only temporarily, if you give up now you will be in pain forever",
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    color: Color(0xff7b6f72),
-                    fontSize: 16,
+                  SizedBox(height: 10),
+                  Text(
+                    "Let’s keep burning, to achive yours goals, it hurts only temporarily, if you give up now you will be in pain forever",
+                    textAlign: TextAlign
+                        .justify, // Justify the body text for better alignment
+                    style: TextStyle(
+                      color: Color(0xff7b6f72),
+                      fontSize: 16,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             const SizedBox(
               height: 100,
@@ -74,13 +80,13 @@ class OneBoard2 extends StatelessWidget {
         ),
         Positioned(
           bottom: 30, // Adjust the distance from the bottom
-          right: 30, // Adjust the distance from the left
+          right: 30, // Adjust the distance from the right
           child: ElevatedButton(
             onPressed: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => onBoard3rd(),
+                  builder: (context) => const onBoard3rd(),
                 ),
               );
             },
@@ -99,35 +105,6 @@ class OneBoard2 extends StatelessWidget {
         ),
       ],
     );
-  }
-}
-
-class CustomShapePainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..shader = const LinearGradient(
-        colors: [Color(0xFF9DCEFF), Color(0xFF92A3FD)],
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-      ).createShader(Rect.fromLTRB(0, 0, size.width, size.height));
-
-    final path = Path()
-      ..moveTo(0, 0)
-      ..lineTo(0, size.height * 0.7)
-      ..quadraticBezierTo(size.width * 0.4, size.height * 0.3, size.width * 0.4,
-          size.height * 0.4)
-      ..quadraticBezierTo(
-          size.width * 0.85, size.height * 0.6, size.width, size.height)
-      ..lineTo(size.width, 0)
-      ..close();
-
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return false;
   }
 }
 

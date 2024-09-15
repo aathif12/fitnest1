@@ -21,44 +21,54 @@ class onBoard3rd extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: MediaQuery.of(context).size.height *
+                  0.57, // 57% of the screen height
               width: double.infinity,
               child: Stack(
                 children: [
                   Center(
                     child: Image.asset(
                       'lib/assets/Frame.png',
-                      height: 800,
-                      width: 900,
+                      height: MediaQuery.of(context).size.height *
+                          0.57, // Set the image height
+                      width: double
+                          .infinity, // Stretch the image to the full width
+                      fit: BoxFit
+                          .cover, // Ensure the image covers the available space
                     ),
                   ),
                 ],
               ),
             ),
             const Spacer(),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: const [
-                Text(
-                  textAlign: TextAlign.start,
-                  "Get Burn",
-                  style: TextStyle(
-                    color: Color(0xff1d1517),
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    height: 1.5,
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: 20.0), // Add horizontal padding for better layout
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const [
+                  Text(
+                    "Eat Well",
+                    textAlign: TextAlign.center, // Center the heading text
+                    style: TextStyle(
+                      color: Color(0xff1d1517),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700,
+                      height: 1.5,
+                    ),
                   ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  " Let’s keep burning, to achive yours goals, it hurts only temporarily, if you give up now you will be in pain forever",
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    color: Color(0xff7b6f72),
-                    fontSize: 16,
+                  SizedBox(height: 10),
+                  Text(
+                    "Let's start a healthy lifestyle with us, we can determine your diet every day. Healthy eating is fun!",
+                    textAlign: TextAlign
+                        .justify, // Justify the body text for better alignment
+                    style: TextStyle(
+                      color: Color(0xff7b6f72),
+                      fontSize: 16,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             const SizedBox(
               height: 100,
@@ -69,13 +79,13 @@ class onBoard3rd extends StatelessWidget {
         ),
         Positioned(
           bottom: 30, // Adjust the distance from the bottom
-          right: 30, // Adjust the distance from the left
+          right: 30, // Adjust the distance from the right
           child: ElevatedButton(
             onPressed: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => onBoard3rd(),
+                  builder: (context) => const onBoard3rd(),
                 ),
               );
             },

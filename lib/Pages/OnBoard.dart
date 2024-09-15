@@ -22,48 +22,54 @@ class OneBoard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.5,
+              height: MediaQuery.of(context).size.height *
+                  0.57, // 57% of the screen height
               width: double.infinity,
               child: Stack(
                 children: [
-                  CustomPaint(
-                    painter: CustomShapePainter(),
-                    size: Size.infinite, // Fills the available space
-                  ),
                   Center(
                     child: Image.asset(
-                      'lib/assets/Female.png',
-                      height: 350,
-                      width: 200,
+                      'lib/assets/FrameFemale.png',
+                      height: MediaQuery.of(context).size.height *
+                          0.57, // Set the image height
+                      width: double
+                          .infinity, // Stretch the image to the full width
+                      fit: BoxFit
+                          .cover, // Ensure the image covers the available space
                     ),
                   ),
                 ],
               ),
             ),
             const Spacer(),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: const [
-                Text(
-                  textAlign: TextAlign.start,
-                  "Track Your Goal",
-                  style: TextStyle(
-                    color: Color(0xff1d1517),
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    height: 1.5,
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: 20.0), // Add horizontal padding for better layout
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const [
+                  Text(
+                    "Track Your Goal",
+                    textAlign: TextAlign.center, // Center the heading text
+                    style: TextStyle(
+                      color: Color(0xff1d1517),
+                      fontSize: 24,
+                      fontWeight: FontWeight.w700,
+                      height: 1.5,
+                    ),
                   ),
-                ),
-                SizedBox(height: 10),
-                Text(
-                  "   Don't worry if you have trouble determining your goals,   We can help you determine your goals and track your goals",
-                  textAlign: TextAlign.left,
-                  style: TextStyle(
-                    color: Color(0xff7b6f72),
-                    fontSize: 16,
+                  SizedBox(height: 10),
+                  Text(
+                    "Don't worry if you have trouble determining your goals, We can help you determine your goals and track your goals",
+                    textAlign: TextAlign
+                        .justify, // Justify the body text for better alignment
+                    style: TextStyle(
+                      color: Color(0xff7b6f72),
+                      fontSize: 16,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             const SizedBox(
               height: 100,
@@ -74,13 +80,13 @@ class OneBoard extends StatelessWidget {
         ),
         Positioned(
           bottom: 30, // Adjust the distance from the bottom
-          right: 30, // Adjust the distance from the left
+          right: 30, // Adjust the distance from the right
           child: ElevatedButton(
             onPressed: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => OneBoard2(),
+                  builder: (context) => const OneBoard2(),
                 ),
               );
             },
@@ -99,35 +105,6 @@ class OneBoard extends StatelessWidget {
         ),
       ],
     );
-  }
-}
-
-class CustomShapePainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..shader = const LinearGradient(
-        colors: [Color(0xFF9DCEFF), Color(0xFF92A3FD)],
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight,
-      ).createShader(Rect.fromLTRB(0, 0, size.width, size.height));
-
-    final path = Path()
-      ..moveTo(0, 0)
-      ..lineTo(0, size.height * 0.7)
-      ..quadraticBezierTo(size.width * 0.3, size.height * 0.9, size.width * 0.4,
-          size.height * 0.85)
-      ..quadraticBezierTo(
-          size.width * 0.85, size.height * 0.8, size.width, size.height)
-      ..lineTo(size.width, 0)
-      ..close();
-
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) {
-    return false;
   }
 }
 
