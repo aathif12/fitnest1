@@ -1,4 +1,5 @@
 // ignore: file_names
+import 'package:fitnest/Pages/Register/Signin.dart';
 import 'package:flutter/material.dart';
 
 class OnBoard4th extends StatelessWidget {
@@ -85,7 +86,7 @@ class OnBoard4th extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const OnBoard4th(),
+                  builder: (context) => const Signin(),
                 ),
               );
             },

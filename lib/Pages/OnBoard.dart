@@ -50,7 +50,7 @@ class OneBoard extends StatelessWidget {
                 children: const [
                   Text(
                     "Track Your Goal",
-                    textAlign: TextAlign.center, // Center the heading text
+                    textAlign: TextAlign.start, // Center the heading text
                     style: TextStyle(
                       color: Color(0xff1d1517),
                       fontSize: 24,
