@@ -42,7 +42,7 @@ class Intro2nd extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.w400,
-                  color: Color(0xff7b6f72),
+                  color: Color.fromARGB(255, 255, 255, 255),
                 ),
               ),
             ],
