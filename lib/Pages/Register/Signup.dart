@@ -143,7 +143,7 @@ class Signin extends StatelessWidget {
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(
                       color: Colors.transparent), // Transparent border
-                  borderRadius: BorderRadius.circular(10.0),
+                  borderRadius: BorderRadius.circular(12.0),
                 ),
               ),
               backgroundColor: Colors.grey[100], // Fill color
