@@ -15,21 +15,21 @@ class Signin extends StatelessWidget {
 
   Widget buildOnboarding(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0), // Overall padding for the screen
+      padding: const EdgeInsets.all(30.0), // Overall padding for the screen
       child: Column(
         mainAxisAlignment:
-            MainAxisAlignment.center, // Centers content vertically
-        crossAxisAlignment:
-            CrossAxisAlignment.start, // Aligns content to the left horizontally
-        children: [
+            MainAxisAlignment.start, // Centers content vertically
+        crossAxisAlignment: CrossAxisAlignment
+            .center, // Aligns content to the left horizontally
+        children: const [
           Text(
             "Hey there,",
             style: TextStyle(
               fontFamily: "Poppins",
-              fontSize: 14,
+              fontSize: 18,
             ),
           ),
-          const SizedBox(height: 10), // Adds space between the texts
+          SizedBox(height: 1), // Adds space between the texts
           Text(
             "Create an Account",
             style: TextStyle(
@@ -38,15 +38,19 @@ class Signin extends StatelessWidget {
               fontWeight: FontWeight.w900,
             ),
           ),
-          const SizedBox(height: 30), // Adds more space before the text field
+          SizedBox(height: 10), // Adds more space before the text field
           TextField(
             decoration: InputDecoration(
-              border: OutlineInputBorder(),
+              fillColor: Colors.white10,
+              filled: true,
+              prefixIcon: Icon(Icons.supervised_user_circle_sharp),
+              enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.transparent)),
               hintText: "UserName",
               labelText: "Username",
             ),
           ),
-          const SizedBox(
+          SizedBox(
               height:
                   20), // Adds space between the text field and other elements
           // You can add more widgets here (e.g., password field, button)
