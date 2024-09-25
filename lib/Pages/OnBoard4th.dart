@@ -1,5 +1,5 @@
 // ignore: file_names
-import 'package:fitnest/Pages/Register/Signin.dart';
+import 'package:fitnest/Pages/Register/Signup.dart';
 import 'package:flutter/material.dart';
 
 class OnBoard4th extends StatelessWidget {
