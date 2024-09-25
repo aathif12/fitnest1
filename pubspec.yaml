@@ -35,6 +35,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
   gradient_elevated_button: ^0.0.5
+  passwordfield: ^0.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -62,6 +63,8 @@ flutter:
     - lib/assets/FrameRunner.png
     - lib/assets/Frame.png
     - lib/assets/FrameYoga.png
+    - lib/assets/Profile.png
+    - lib/assets/Message.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
