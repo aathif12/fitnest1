@@ -7,7 +7,7 @@ class Signin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: new ThemeData(scaffoldBackgroundColor: Colors.white),
+      theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: buildOnboarding(context),
@@ -23,7 +23,7 @@ class Signin extends StatelessWidget {
           mainAxisAlignment:
               MainAxisAlignment.start, // Centers content vertically
           crossAxisAlignment: CrossAxisAlignment
-              .center, // Aligns content to the left horizontally
+              .center, // Aligns content to the center horizontally
           children: [
             Text(
               "Hey there,",
@@ -42,6 +42,7 @@ class Signin extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10), // Adds more space before the text field
+            // Firstname TextField
             TextField(
               decoration: InputDecoration(
                 fillColor: Colors.grey[100],
@@ -49,21 +50,28 @@ class Signin extends StatelessWidget {
                 filled: true,
                 prefixIcon: Padding(
                   padding: const EdgeInsets.only(top: 1),
-                  child: Image.asset(
-                    'lib/assets/Profile.png',
+                  child: SizedBox(
+                    width: 20.0,
+                    height: 20.0,
+                    child: Image.asset(
+                      'lib/assets/Profile.png',
+                    ),
                   ),
                 ),
                 enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.transparent),
-                    borderRadius: BorderRadius.circular(10.0)),
+                  borderSide: BorderSide(color: Colors.transparent),
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
                 focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    borderSide: BorderSide(color: Colors.transparent)),
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(color: Colors.transparent),
+                ),
                 hintText: "Firstname",
                 labelText: "Firstname",
               ),
             ),
             SizedBox(height: 20),
+            // Lastname TextField
             TextField(
               decoration: InputDecoration(
                 fillColor: Colors.grey[100],
@@ -71,21 +79,28 @@ class Signin extends StatelessWidget {
                 filled: true,
                 prefixIcon: Padding(
                   padding: const EdgeInsets.only(top: 1),
-                  child: Image.asset(
-                    'lib/assets/Profile.png',
+                  child: SizedBox(
+                    width: 20.0,
+                    height: 20.0,
+                    child: Image.asset(
+                      'lib/assets/Profile.png',
+                    ),
                   ),
                 ),
                 enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.transparent),
-                    borderRadius: BorderRadius.circular(10.0)),
+                  borderSide: BorderSide(color: Colors.transparent),
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
                 focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    borderSide: BorderSide(color: Colors.transparent)),
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(color: Colors.transparent),
+                ),
                 hintText: "Lastname",
                 labelText: "Lastname",
               ),
             ),
             SizedBox(height: 20),
+            // Email TextField
             TextField(
               decoration: InputDecoration(
                 fillColor: Colors.grey[100],
@@ -93,32 +108,46 @@ class Signin extends StatelessWidget {
                 filled: true,
                 prefixIcon: Padding(
                   padding: const EdgeInsets.only(top: 1),
-                  child: Image.asset(
-                    'lib/assets/Message.png',
+                  child: SizedBox(
+                    width: 20.0,
+                    height: 20.0,
+                    child: Image.asset(
+                      'lib/assets/Message.png',
+                    ),
                   ),
                 ),
                 enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.transparent),
-                    borderRadius: BorderRadius.circular(10.0)),
+                  borderSide: BorderSide(color: Colors.transparent),
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
                 focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                    borderSide: BorderSide(color: Colors.transparent)),
-                hintText: "Lastname",
-                labelText: "Lastname",
+                  borderRadius: BorderRadius.circular(10.0),
+                  borderSide: BorderSide(color: Colors.transparent),
+                ),
+                hintText: "Email",
+                labelText: "Email",
               ),
             ),
             SizedBox(height: 20),
+            // PasswordField with transparent borders
             PasswordField(
               passwordDecoration: PasswordDecoration(),
               passwordConstraint: r'.*[@$#.*].*',
+
               border: PasswordBorder(
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.transparent),
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.transparent))),
-            )
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors.transparent), // Transparent border
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Colors.transparent), // Transparent border
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+              backgroundColor: Colors.grey[100], // Fill color
+            ),
           ],
         ),
       ),
