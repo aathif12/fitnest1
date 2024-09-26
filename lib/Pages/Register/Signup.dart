@@ -133,7 +133,6 @@ class Signin extends StatelessWidget {
             PasswordField(
               passwordDecoration: PasswordDecoration(),
               passwordConstraint: r'.*[@$#.*].*',
-
               border: PasswordBorder(
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(
@@ -147,6 +146,14 @@ class Signin extends StatelessWidget {
                 ),
               ),
               backgroundColor: Colors.grey[100], // Fill color
+            ),
+            SizedBox(height: 20),
+            // Checkbox
+            Checkbox(
+              value: false,
+              onChanged: (bool? newValue) {
+                // Handle checkbox state change
+              },
             ),
           ],
         ),
