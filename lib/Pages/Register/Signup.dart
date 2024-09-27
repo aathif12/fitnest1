@@ -1,4 +1,6 @@
+import 'package:fitnest/Pages/Intro2nd.dart';
 import 'package:flutter/material.dart';
+import 'package:gradient_elevated_button/gradient_elevated_button.dart';
 import 'package:passwordfield/passwordfield.dart';
 
 class Signin extends StatelessWidget {
@@ -41,7 +43,7 @@ class Signin extends StatelessWidget {
                 fontWeight: FontWeight.w900,
               ),
             ),
-            SizedBox(height: 10), // Adds more space before the text field
+            SizedBox(height: 20), // Adds more space before the text field
             // Firstname TextField
             TextField(
               decoration: InputDecoration(
@@ -148,13 +150,90 @@ class Signin extends StatelessWidget {
               backgroundColor: Colors.grey[100], // Fill color
             ),
             SizedBox(height: 20),
-            // Checkbox
-            Checkbox(
-              value: false,
-              onChanged: (bool? newValue) {
-                // Handle checkbox state change
-              },
+            // Checkbox and Text on the same line
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Checkbox(
+                  value: false,
+                  onChanged: (bool? newValue) {
+                    // Handle checkbox state change
+                  },
+                ),
+                Expanded(
+                  child: Text(
+                    "By continuing you accept our Privacy Policy and Term of Use",
+                    style: TextStyle(
+                      fontFamily: "Poppins",
+                      fontSize: 12,
+                    ),
+                  ),
+                ),
+              ],
             ),
+            SizedBox(height: 80),
+            GradientElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Intro2nd(),
+                  ),
+                );
+              },
+              style: GradientElevatedButton.styleFrom(
+                minimumSize: Size(315, 60),
+                gradient: const LinearGradient(
+                  colors: [
+                    Color.fromRGBO(146, 163, 253, 1),
+                    Color.fromRGBO(157, 206, 255, 1),
+                  ],
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                ),
+              ),
+              child: Text(
+                "Register",
+                style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Image.asset('lib/assets/or.png'),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Image.asset("lib/assets/Google.png"),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  child: Image.asset("lib/assets/facebook.png"),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Already have an account?"),
+                TextButton(
+                  onPressed: () {},
+                  child: Text("Login"),
+                ),
+              ],
+            )
           ],
         ),
       ),
