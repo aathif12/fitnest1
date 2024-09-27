@@ -1,4 +1,5 @@
 import 'package:fitnest/Pages/Intro2nd.dart';
+import 'package:fitnest/Pages/Register/Register1.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_elevated_button/gradient_elevated_button.dart';
 import 'package:passwordfield/passwordfield.dart';
@@ -177,7 +178,7 @@ class Signin extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Intro2nd(),
+                    builder: (context) => Register1(),
                   ),
                 );
               },

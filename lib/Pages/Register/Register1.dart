@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:gradient_elevated_button/gradient_elevated_button.dart';
 import 'package:passwordfield/passwordfield.dart';
 
-class Signin extends StatelessWidget {
-  const Signin({super.key});
+class Register1 extends StatelessWidget {
+  const Register1({super.key});
 
   @override
   Widget build(BuildContext context) {
