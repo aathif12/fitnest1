@@ -19,16 +19,21 @@ class Register1 extends StatelessWidget {
 
   Widget buildOnboarding(BuildContext context) {
     return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Image.asset("lib/assets/Gym.png"),
-          Center(
-            child: Text(
-              "Let’s complete your profile",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            "Let’s complete your profile",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+          ),
+          Text(
+            "It will help us to know more about you!",
+            style: TextStyle(fontWeight: FontWeight.w300),
           )
         ],
       ),
