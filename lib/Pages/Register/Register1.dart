@@ -22,7 +22,15 @@ class Register1 extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [Image.asset("lib/assets/Gym.png")],
+        children: [
+          Image.asset("lib/assets/Gym.png"),
+          Center(
+            child: Text(
+              "Let’s complete your profile",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          )
+        ],
       ),
     );
   }
