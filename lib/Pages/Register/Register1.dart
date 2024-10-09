@@ -1,3 +1,5 @@
+import 'package:fitnest/Pages/OnBoard4th.dart';
+import 'package:fitnest/Pages/Register/SignIn.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_elevated_button/gradient_elevated_button.dart';
 import 'package:passwordfield/passwordfield.dart';
@@ -56,6 +58,27 @@ class _Register1State extends State<Register1> {
                 _selectedValue = val!;
               });
             },
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const Signin(),
+                ),
+              );
+            },
+            style: ElevatedButton.styleFrom(
+              shape: const CircleBorder(),
+              padding: const EdgeInsets.all(20),
+              backgroundColor: const Color(0xFF92A3FD),
+              side: const BorderSide(width: 3.0, color: Colors.white),
+            ),
+            child: const Icon(
+              Icons.keyboard_arrow_right_rounded,
+              size: 30,
+              color: Colors.white,
+            ),
           ),
         ],
       ),
