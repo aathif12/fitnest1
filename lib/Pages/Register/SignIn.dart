@@ -100,19 +100,11 @@ class Signin extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Checkbox(
-                  value: false,
-                  onChanged: (bool? newValue) {
-                    // Handle checkbox state change
-                  },
-                ),
-                Expanded(
-                  child: Text(
-                    "By continuing you accept our Privacy Policy and Term of Use",
-                    style: TextStyle(
-                      fontFamily: "Poppins",
-                      fontSize: 12,
-                    ),
+                Text(
+                  "Forget Password",
+                  style: TextStyle(
+                    fontFamily: "Poppins",
+                    fontSize: 12,
                   ),
                 ),
               ],
