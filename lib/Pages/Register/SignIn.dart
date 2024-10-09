@@ -1,5 +1,8 @@
 import 'package:fitnest/Pages/Register/Register1.dart';
+import 'package:fitnest/Pages/Register/Signup.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:gradient_elevated_button/gradient_elevated_button.dart';
 import 'package:passwordfield/passwordfield.dart';
 
@@ -28,15 +31,15 @@ class Signin extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment
               .center, // Aligns content to the center horizontally
           children: [
-            Text(
+            const Text(
               "Hey there,",
               style: TextStyle(
                 fontFamily: "Poppins",
                 fontSize: 18,
               ),
             ),
-            SizedBox(height: 1), // Adds space between the texts
-            Text(
+            const SizedBox(height: 1), // Adds space between the texts
+            const Text(
               "Welocme Back",
               style: TextStyle(
                 fontFamily: "Poppins-Bold",
@@ -44,10 +47,10 @@ class Signin extends StatelessWidget {
                 fontWeight: FontWeight.w900,
               ),
             ),
-            SizedBox(height: 20), // Adds more space before the text field
+            const SizedBox(height: 20), // Adds more space before the text field
             // Firstname TextField
 
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Email TextField
             TextField(
               decoration: InputDecoration(
@@ -65,37 +68,37 @@ class Signin extends StatelessWidget {
                   ),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.transparent),
+                  borderSide: const BorderSide(color: Colors.transparent),
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10.0),
-                  borderSide: BorderSide(color: Colors.transparent),
+                  borderSide: const BorderSide(color: Colors.transparent),
                 ),
                 hintText: "Email",
                 labelText: "Email",
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // PasswordField with transparent borders
             PasswordField(
               passwordDecoration: PasswordDecoration(),
               passwordConstraint: r'.*[@$#.*].*',
               border: PasswordBorder(
                 enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                       color: Colors.transparent), // Transparent border
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(
+                  borderSide: const BorderSide(
                       color: Colors.transparent), // Transparent border
                   borderRadius: BorderRadius.circular(10.0),
                 ),
               ),
               backgroundColor: Colors.grey[100], // Fill color
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             // Checkbox and Text on the same line
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -103,25 +106,25 @@ class Signin extends StatelessWidget {
                 TextButton(
                   onPressed: () {},
                   style: TextButton.styleFrom(
-                      textStyle: TextStyle(
+                      textStyle: const TextStyle(
                           fontFamily: "Poppins",
                           decoration: TextDecoration.underline)),
                   child: const Text("Forget Password"),
                 ),
               ],
             ),
-            SizedBox(height: 80),
+            const SizedBox(height: 376),
             GradientElevatedButton(
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Register1(),
+                    builder: (context) => const Register1(),
                   ),
                 );
               },
               style: GradientElevatedButton.styleFrom(
-                minimumSize: Size(315, 60),
+                minimumSize: const Size(315, 60),
                 gradient: const LinearGradient(
                   colors: [
                     Color.fromRGBO(146, 163, 253, 1),
@@ -131,19 +134,19 @@ class Signin extends StatelessWidget {
                   end: Alignment.bottomCenter,
                 ),
               ),
-              child: Text(
-                "Register",
+              child: const Text(
+                "Login",
                 style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w900,
                     color: Colors.white),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Image.asset('lib/assets/or.png'),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
@@ -154,7 +157,7 @@ class Signin extends StatelessWidget {
                   onPressed: () {},
                   child: Image.asset("lib/assets/Google.png"),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 ElevatedButton(
@@ -166,13 +169,18 @@ class Signin extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't  have an account?"),
+                const Text("Don't  have an account?"),
                 TextButton(
-                  onPressed: () {},
-                  child: Text("Register"),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Signup()));
+                  },
                   style: TextButton.styleFrom(
-                      textStyle:
-                          TextStyle(decoration: TextDecoration.underline)),
+                      textStyle: const TextStyle(
+                          decoration: TextDecoration.underline)),
+                  child: const Text("Register"),
                 ),
               ],
             )

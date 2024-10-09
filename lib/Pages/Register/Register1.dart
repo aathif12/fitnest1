@@ -60,25 +60,33 @@ class _Register1State extends State<Register1> {
               });
             },
           ),
-          ElevatedButton(
+          SizedBox(height: 250),
+          GradientElevatedButton(
             onPressed: () {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const Signin(),
+                  builder: (context) => Register1(),
                 ),
               );
             },
-            style: ElevatedButton.styleFrom(
-              shape: const CircleBorder(),
-              padding: const EdgeInsets.all(20),
-              backgroundColor: const Color(0xFF92A3FD),
-              side: const BorderSide(width: 3.0, color: Colors.white),
+            style: GradientElevatedButton.styleFrom(
+              minimumSize: Size(315, 60),
+              gradient: const LinearGradient(
+                colors: [
+                  Color.fromRGBO(146, 163, 253, 1),
+                  Color.fromRGBO(157, 206, 255, 1),
+                ],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
             ),
-            child: const Icon(
-              Icons.keyboard_arrow_right_rounded,
-              size: 30,
-              color: Colors.white,
+            child: Text(
+              "Register",
+              style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.white),
             ),
           ),
         ],

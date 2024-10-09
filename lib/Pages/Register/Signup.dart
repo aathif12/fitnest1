@@ -1,5 +1,6 @@
 import 'package:fitnest/Pages/Intro2nd.dart';
 import 'package:fitnest/Pages/Register/Register1.dart';
+import 'package:fitnest/Pages/Register/Signin.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_elevated_button/gradient_elevated_button.dart';
 import 'package:passwordfield/passwordfield.dart';
@@ -173,7 +174,7 @@ class Signup extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 80),
+            SizedBox(height: 250),
             GradientElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -231,7 +232,10 @@ class Signup extends StatelessWidget {
               children: [
                 Text("Already have an account?"),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Signin()));
+                  },
                   child: Text("Login"),
                 ),
               ],
