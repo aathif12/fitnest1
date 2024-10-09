@@ -1,8 +1,6 @@
-import 'package:fitnest/Pages/OnBoard4th.dart';
-import 'package:fitnest/Pages/Register/SignIn.dart';
+import 'package:fitnest/Pages/Register/Signin.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_elevated_button/gradient_elevated_button.dart';
-import 'package:passwordfield/passwordfield.dart';
 
 final List<String> gender = ["Male", "Female"];
 
@@ -66,7 +64,7 @@ class _Register1State extends State<Register1> {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => Register1(),
+                  builder: (context) => Signin(),
                 ),
               );
             },

@@ -1,3 +1,4 @@
+import 'package:fitnest/Pages/Register/GotoHome.dart';
 import 'package:fitnest/Pages/Register/Register1.dart';
 import 'package:fitnest/Pages/Register/Signup.dart';
 import 'package:flutter/cupertino.dart';
@@ -119,7 +120,7 @@ class Signin extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const Register1(),
+                    builder: (context) => const GotoHome(),
                   ),
                 );
               },

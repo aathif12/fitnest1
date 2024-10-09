@@ -1,4 +1,3 @@
-import 'package:fitnest/Pages/Intro2nd.dart';
 import 'package:fitnest/Pages/Register/Register1.dart';
 import 'package:fitnest/Pages/Register/Signin.dart';
 import 'package:flutter/material.dart';
