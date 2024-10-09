@@ -69,6 +69,7 @@ flutter:
     - lib/assets/Google.png
     - lib/assets/facebook.png
     - lib/assets/Gym.png
+    - lib/assets/Group.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
