@@ -36,7 +36,7 @@ class GotoHome extends StatelessWidget {
                 child: Text(
                   "You are all set now, let’s reach your goals together with us",
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 12,
                     fontWeight: FontWeight.w400,
                     color: Color.fromARGB(255, 0, 0, 0),
                   ),
@@ -67,7 +67,7 @@ class GotoHome extends StatelessWidget {
                     backgroundColor: WidgetStateProperty.all(Colors.white),
                   ),
                   child: Text(
-                    "Get Started",
+                    "Go To Home",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
