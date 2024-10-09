@@ -17,11 +17,6 @@ class GotoHome extends StatelessWidget {
 
   Container welcomeScreenDark(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [Color(0xff92a3fd), Color(0xff9dceff)],
-        ),
-      ),
       child: Column(
         children: [
           Spacer(), // This will push the content to the center
@@ -30,19 +25,21 @@ class GotoHome extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                "FitnestX",
+                "Welcome",
                 style: TextStyle(
                   fontSize: 36,
                   fontWeight: FontWeight.w700,
                 ),
               ),
               SizedBox(height: 8), // Space between the texts
-              Text(
-                "Everybody Can Train",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.w400,
-                  color: Color.fromARGB(255, 255, 255, 255),
+              Center(
+                child: Text(
+                  "You are all set now, let’s reach your goals together with us",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400,
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
                 ),
               ),
             ],
