@@ -22,6 +22,7 @@ class _Register1State extends State<Register1> {
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: buildOnboarding(context),
       ),
     );

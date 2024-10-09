@@ -13,6 +13,7 @@ class Signup extends StatelessWidget {
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: buildOnboarding(context),
       ),
     );

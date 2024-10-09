@@ -1,4 +1,3 @@
-import 'package:fitnest/Pages/Intro2nd.dart';
 import 'package:fitnest/Pages/Register/Register1.dart';
 import 'package:flutter/material.dart';
 import 'package:gradient_elevated_button/gradient_elevated_button.dart';
@@ -13,6 +12,7 @@ class Signin extends StatelessWidget {
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        resizeToAvoidBottomInset: false,
         body: buildOnboarding(context),
       ),
     );
@@ -95,17 +95,18 @@ class Signin extends StatelessWidget {
               ),
               backgroundColor: Colors.grey[100], // Fill color
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             // Checkbox and Text on the same line
             Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  "Forget Password",
-                  style: TextStyle(
-                    fontFamily: "Poppins",
-                    fontSize: 12,
-                  ),
+                TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                      textStyle: TextStyle(
+                          fontFamily: "Poppins",
+                          decoration: TextDecoration.underline)),
+                  child: const Text("Forget Password"),
                 ),
               ],
             ),
@@ -165,10 +166,13 @@ class Signin extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Already have an account?"),
+                Text("Don't  have an account?"),
                 TextButton(
                   onPressed: () {},
-                  child: Text("Login"),
+                  child: Text("Register"),
+                  style: TextButton.styleFrom(
+                      textStyle:
+                          TextStyle(decoration: TextDecoration.underline)),
                 ),
               ],
             )
